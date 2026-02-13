@@ -193,8 +193,6 @@ body {
     opacity: 0;
 }
 
-/* ... (los estilos de los pétalos se mantienen igual) ... */
-
 .flower-petal__1 {
     bottom: 42%;
     right: 65%;
@@ -600,9 +598,7 @@ body {
     }
 }
 
-/* ===== MENSAJES DE SAN VALENTÍN RESPONSIVE ===== */
-
-/* Mensaje de San Valentín - CORREGIDO */
+/* ===== MENSAJE DE SAN VALENTÍN - CORREGIDO ===== */
 .valentine-whisper {
     position: absolute;
     top: 30%;
@@ -614,8 +610,8 @@ body {
     text-align: center;
     pointer-events: none;
     width: 100%;
-    max-width: 800px;
-    background: transparent; /* Eliminar fondo azul */
+    max-width: 1000px;
+    background: transparent;
 }
 
 .valentine-whisper * {
@@ -625,28 +621,28 @@ body {
 .whisper-text {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    margin-bottom: 2.5rem;
-    background: transparent; /* Fondo transparente */
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    background: transparent;
 }
 
 .line {
     font-family: 'Georgia', serif;
-    font-size: 3.5rem; /* Mucho más grande */
-    color: rgba(255, 255, 255, 0.9);
-    letter-spacing: 6px;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 8px;
     font-weight: 300;
-    text-shadow: 0 0 30px rgba(155, 89, 182, 0.6), 0 0 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 40px rgba(155, 89, 182, 0.7), 0 0 20px rgba(0, 0, 0, 0.5);
     background: transparent;
     line-height: 1.2;
 }
 
 .line.highlight {
-    font-size: 5rem; /* Aún más grande */
+    font-size: 6rem;
     color: #ffffff;
-    text-shadow: 0 0 50px rgba(155, 89, 182, 0.9), 0 0 20px rgba(255, 255, 255, 0.7);
-    letter-spacing: 12px;
-    margin-top: 0.5rem;
+    text-shadow: 0 0 60px rgba(155, 89, 182, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+    letter-spacing: 16px;
+    margin-top: 0.3rem;
     font-weight: 400;
 }
 
@@ -661,7 +657,7 @@ body {
 }
 
 .whisper-btn {
-    background: transparent; /* Fondo transparente */
+    background: transparent;
     border: none;
     cursor: pointer;
     display: flex;
@@ -669,86 +665,139 @@ body {
     gap: 1rem;
     padding: 1rem 3rem;
     transition: all 0.3s ease;
-    opacity: 0.9;
+    opacity: 0.95;
     position: relative;
     border-radius: 50px;
 }
 
-.whisper-btn:hover {
-    background: rgba(155, 89, 182, 0.1);
-    transform: translateY(-3px);
-}
-
 .btn-label {
     font-family: 'Georgia', serif;
-    font-size: 2.5rem; /* Botones más grandes */
+    font-size: 3rem;
     color: #ffffff;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-transform: lowercase;
-    text-shadow: 0 0 20px rgba(155, 89, 182, 0.5);
+    text-shadow: 0 0 30px rgba(155, 89, 182, 0.6);
 }
 
 .btn-dot {
-    font-size: 2.5rem;
+    font-size: 3rem;
     opacity: 0.9;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 0 15px rgba(155, 89, 182, 0.7));
+    filter: drop-shadow(0 0 20px rgba(155, 89, 182, 0.8));
 }
 
 .option-divider {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 3rem;
-    text-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 3.5rem;
+    text-shadow: 0 0 20px rgba(155, 89, 182, 0.6);
 }
 
-/* Responsive para móviles */
-@media screen and (max-width: 768px) {
+/* ===== MEDIA QUERIES PARA MÓVILES ===== */
+@media screen and (max-width: 1024px) {
     .line {
+        font-size: 3.5rem;
+        letter-spacing: 6px;
+    }
+    
+    .line.highlight {
+        font-size: 5rem;
+        letter-spacing: 12px;
+    }
+    
+    .btn-label, .btn-dot {
         font-size: 2.5rem;
+    }
+    
+    .option-divider {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .valentine-whisper {
+        top: 28%;
+        width: 95%;
+    }
+    
+    .line {
+        font-size: 2.8rem;
         letter-spacing: 4px;
     }
     
     .line.highlight {
-        font-size: 3.5rem;
+        font-size: 4rem;
         letter-spacing: 8px;
     }
     
-    .btn-label {
-        font-size: 2rem;
-    }
-    
-    .btn-dot {
-        font-size: 2rem;
-    }
-    
-    .option-divider {
-        font-size: 2.2rem;
+    .whisper-options {
+        gap: 1.5rem;
     }
     
     .whisper-btn {
         padding: 0.8rem 2rem;
     }
+    
+    .btn-label, .btn-dot {
+        font-size: 2.2rem;
+    }
+    
+    .option-divider {
+        font-size: 2.5rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
+    .valentine-whisper {
+        top: 25%;
+    }
+    
+    .line {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+    }
+    
+    .line.highlight {
+        font-size: 3.2rem;
+        letter-spacing: 6px;
+    }
+    
+    .whisper-options {
+        gap: 1rem;
+    }
+    
+    .whisper-btn {
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .btn-label, .btn-dot {
+        font-size: 1.8rem;
+    }
+    
+    .option-divider {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
     .line {
         font-size: 1.8rem;
     }
     
     .line.highlight {
         font-size: 2.5rem;
+        letter-spacing: 4px;
     }
     
-    .btn-label {
+    .btn-label, .btn-dot {
         font-size: 1.5rem;
     }
     
-    .whisper-options {
-        gap: 1rem;
+    .whisper-btn {
+        padding: 0.5rem 1rem;
     }
 }
 
-/* Mensaje "nice try" responsive */
+/* ===== MENSAJE NICE TRY ===== */
 .nice-try-message {
     position: absolute;
     top: 50%;
@@ -775,7 +824,7 @@ body {
 
 .nice-try-text {
     font-family: 'Georgia', serif;
-    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 0 0 30px rgba(155, 89, 182, 0.8);
     letter-spacing: 2px;
@@ -786,13 +835,13 @@ body {
 }
 
 .nice-try-decoration {
-    font-size: clamp(1.5rem, 5vw, 2.8rem);
+    font-size: clamp(2rem, 6vw, 3rem);
     opacity: 0.8;
     animation: sparkle 1s ease-in-out infinite;
     display: block;
 }
 
-/* Invitación responsive */
+/* ===== INVITACIÓN ===== */
 .invitation-message {
     position: absolute;
     top: 50%;
@@ -816,14 +865,12 @@ body {
 .invitation-container {
     background: rgba(25, 15, 35, 0.7);
     backdrop-filter: blur(12px);
-    padding: clamp(1.5rem, 4vw, 2.8rem) clamp(1.5rem, 4vw, 3rem);
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 3rem);
     border-radius: 40px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3),
                 0 0 0 1px rgba(155, 89, 182, 0.2) inset,
                 0 0 50px rgba(155, 89, 182, 0.4);
     position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
 }
 
 .invitation-header {
@@ -831,46 +878,45 @@ body {
     align-items: center;
     justify-content: center;
     gap: clamp(0.8rem, 3vw, 1.5rem);
-    margin-bottom: clamp(1rem, 3vw, 1.8rem);
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
     flex-wrap: wrap;
 }
 
 .header-flower {
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     animation: float-flower 3s ease-in-out infinite;
 }
 
 .header-text {
     font-family: 'Georgia', serif;
-    font-size: clamp(0.9rem, 3vw, 1.3rem);
+    font-size: clamp(1rem, 3vw, 1.2rem);
     color: rgba(255, 255, 255, 0.7);
-    letter-spacing: clamp(2px, 3vw, 4px);
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
 .invitation-title {
     font-family: 'Georgia', serif;
-    font-size: clamp(1.5rem, 5vw, 2.4rem);
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
     color: #fff;
-    margin: 0 0 clamp(1.5rem, 4vw, 2.2rem) 0;
+    margin: 0 0 clamp(1.5rem, 4vw, 2rem) 0;
     font-weight: 300;
     text-shadow: 0 0 30px rgba(155, 89, 182, 0.6);
     letter-spacing: 2px;
-    line-height: 1.3;
 }
 
 .plan-details {
     display: flex;
     flex-direction: column;
-    gap: clamp(0.8rem, 2vw, 1.2rem);
-    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    gap: clamp(0.8rem, 2vw, 1rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
 }
 
 .plan-item {
     display: flex;
     align-items: center;
-    gap: clamp(0.8rem, 3vw, 1.5rem);
-    padding: clamp(0.5rem, 2vw, 0.9rem) clamp(1rem, 3vw, 1.8rem);
+    gap: clamp(0.8rem, 3vw, 1.2rem);
+    padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1rem, 3vw, 1.5rem);
     background: rgba(255, 255, 255, 0.03);
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -879,13 +925,13 @@ body {
 }
 
 .plan-icon {
-    font-size: clamp(1.2rem, 4vw, 1.9rem);
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
     min-width: 35px;
 }
 
 .plan-text {
     font-family: 'Georgia', serif;
-    font-size: clamp(0.9rem, 3vw, 1.3rem);
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: 1px;
     text-align: left;
@@ -900,19 +946,19 @@ body {
 .invitation-footer {
     text-align: center;
     border-top: 1px solid rgba(155, 89, 182, 0.3);
-    padding-top: clamp(1rem, 3vw, 1.8rem);
+    padding-top: clamp(1rem, 3vw, 1.5rem);
 }
 
 .invitation-footer p {
     font-family: 'Georgia', serif;
-    font-size: clamp(1.1rem, 4vw, 1.6rem);
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     color: rgba(255, 255, 255, 0.9);
     margin: 0 0 0.5rem 0;
     font-style: italic;
 }
 
 .footer-flowers {
-    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     color: rgba(155, 89, 182, 0.6);
     letter-spacing: 0.5rem;
 }
@@ -923,7 +969,7 @@ body {
     right: 10px;
     background: none;
     border: none;
-    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
     cursor: pointer;
     opacity: 0.5;
     transition: all 0.3s ease;
@@ -936,7 +982,7 @@ body {
     transform: rotate(90deg) scale(1.1);
 }
 
-/* Animaciones */
+/* ===== ANIMACIONES ===== */
 @keyframes whisper-appear {
     0% {
         opacity: 0;
@@ -1000,51 +1046,4 @@ body {
     0%, 100% { transform: translateX(0); }
     10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
     20%, 40%, 60%, 80% { transform: translateX(5px); }
-}
-
-/* Ajustes específicos para móviles muy pequeños */
-@media screen and (max-width: 380px) {
-    .whisper-options {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-    
-    .option-divider {
-        display: none;
-    }
-    
-    .plan-item {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .plan-text {
-        text-align: center;
-    }
-}
-
-/* Mejoras para tablets en orientación horizontal */
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .ground {
-        transform: scale(1.3);
-    }
-    
-    .invitation-container {
-        max-height: 85vh;
-    }
-}
-
-/* Prevención de overflow en pantallas muy pequeñas */
-@media screen and (max-height: 600px) {
-    .valentine-whisper {
-        top: 35%;
-    }
-    
-    .invitation-container {
-        max-height: 80vh;
-    }
-    
-    .plan-details {
-        gap: 0.5rem;
-    }
 }
