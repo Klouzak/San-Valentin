@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Glowing Flower Animation</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="ground">
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+    </div>
+
+    <!-- Mensaje sutil de San Valentín -->
+    <div class="valentine-whisper">
+        <div class="whisper-text">
+            <span class="line">¿quieres ser mi</span>
+            <span class="line highlight">San Valentín?</span>
+        </div>
+        
+        <div class="whisper-options">
+            <button class="whisper-btn" id="whisperYes">
+                <span class="btn-dot">💜</span>
+                <span class="btn-label">sí</span>
+            </button>
+            <span class="option-divider">•</span>
+            <button class="whisper-btn" id="whisperNo">
+                <span class="btn-label">no</span>
+                <span class="btn-dot">✨</span>
+            </button>
+        </div>
+    </div>
+
+      <!-- Mensaje "nice try" -->
+      <div class="nice-try-message" id="niceTryMessage">
+          <span class="nice-try-text">Como que no ?</span>
+          <span class="nice-try-decoration">😡😠😒</span>
+      </div>
+
+      <!-- Mensaje de invitación especial -->
+<div class="invitation-message" id="invitationMessage">
+    <div class="invitation-container">
+        <div class="invitation-header">
+            <span class="header-flower">💜</span>
+            <span class="header-text">14 de febrero</span>
+            <span class="header-flower">💜</span>
+        </div>
+        
+        <h3 class="invitation-title">Planes del día</h3>
+        
+        <div class="plan-details">
+            <div class="plan-item">
+                <span class="plan-icon">🚗</span>
+                <span class="plan-text">2:00pm - Buscarte en casa</span>
+            </div>
+            <div class="plan-item">
+                <span class="plan-icon">🍜</span>
+                <span class="plan-text">3:00pm - Almorzar junros ramen</span>
+            </div>
+            <div class="plan-item">
+                <span class="plan-icon">🚗</span>
+                <span class="plan-text">5:00pm - Volver a San Antonio  </span>
+            </div>
+            <div class="plan-item">
+                <span class="plan-icon">🍦</span>
+                <span class="plan-text">6:00pm -Comer helados</span>
+            </div>
+
+            <div class="plan-item highlight-item">
+                <span class="plan-icon">🌙</span>
+                <span class="plan-text">6:30 - Ir a tomar algo y Cenar</span>
+            </div>
+        </div>
+        
+        <div class="invitation-footer">
+            <p>Te espero💜</p>
+            <div class="footer-flowers">⚘ ⚘ ⚘</div>
+        </div>
+        
+        <button class="close-invitation" id="closeInvitation">
+            <span>✨</span>
+        </button>
+    </div>
+</div>
+        
+
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
